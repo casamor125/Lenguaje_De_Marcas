@@ -11,4 +11,8 @@ imagen2: https://casamor125.github.io/Lenguaje_De_Marcas/Act3(Tablas)/imagen2.ht
 imagen3:https://casamor125.github.io/Lenguaje_De_Marcas/Act3(Tablas)/imagen3.html
 -----------------------
 Actividad 4: https://casamor125.github.io/Lenguaje_De_Marcas/Act4/actividad4.html
+<<<<<<< HEAD
 -----------------------
+=======
+-----------------------
+>>>>>>> 41babcb080f0878208b593b0cdadaf02ac778bc4
