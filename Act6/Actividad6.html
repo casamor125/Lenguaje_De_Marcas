@@ -7,12 +7,52 @@
 </head>
 <body>
     <form>
-        <div style = "border-solid:50px solid: rgb(188, 21, 154); height:200px ;width: 200px;">
-            <p> asddddddddfserrrrrrrrrrrrrrrrrrrrrrrrrr</p>
-            <input type="button">
-            <input type="date">
-        </div>
-       
+        
+        
+          <fieldset style = " border :1px solid rgb(161, 13, 124) ;border-radius: 10px;">
+            <legend> Rellenar</legend>
+           
+           
+                <input type="radio" id="Inglés" name="fav_language" value="Inglés">
+                <label for="Inglés">Inglés</label><br>
+                <input type="radio" id="Aleman" name="fav_language" value="Aleman">
+                <label for="Aleman">Aleman</label><br>
+                <input type="radio" id="Francés" name="fav_language" value="Francés">
+                <label for="Francés">Francés</label><br>
+
+                    <select id="Elegir" name="Elegir">
+                        <option value="USB">USB</option>
+                        <option value="C">C</option>
+                        <option value="opt3">Option 3</option>
+                        <option value="Opt4">Opcion4</option>
+                    </select> <br>
+
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname" ><br>
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname" ><br>
+               
+                
+              
+
+            
+            </fieldset><br>
+            <fieldset style = " border :1px solid rgb(32, 255, 36) ;border-radius: 10px;">
+                <legend>Indique sus preferencias por favor</legend>
+
+                <select id="Elegir" name="Elegir" size = "4">
+                    <option value="Mujer">Mujer</option>
+                    <option value="Hombre">Hombre</option>
+                </select> <br>
+
+        <input type="checkbox" id="Mujer" name="Mujer" value="Mujer">
+        <label for="Mujer"> Mujer</label><br>
+        <input type="checkbox" id="Hombre" name="Hombre" value="Hombre">
+        <label for="Hombre"> Hombre</label><br>
+        <p>Elija una fecha  <input type= "date">  </p>         
+        
+        
+            </fieldset>
 
     </form>
 </body>
