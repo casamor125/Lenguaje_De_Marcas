@@ -18,4 +18,6 @@ Actividad 4: https://casamor125.github.io/Lenguaje_De_Marcas/Act4/actividad4.htm
 -----------------------
 Actividad 6: https://casamor125.github.io/Lenguaje_De_Marcas/Act6/Actividad6.html
 -----------------------
+Actividad 7: https://casamor125.github.io/Lenguaje_De_Marcas/Act7/Actividad7.html
+-----------------------
 >>>>>>> 41babcb080f0878208b593b0cdadaf02ac778bc4
