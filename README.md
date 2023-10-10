@@ -1,5 +1,9 @@
+
+<<<<<<< HEAD
+-----------------------
+=======
 # Lenguaje_De_Marcas
-head>>>>>
+
 -----------------------
 Actividad 1: https://casamor125.github.io/Lenguaje_De_Marcas/Act1/Act1.html
 -----------------------
@@ -11,8 +15,7 @@ imagen2: https://casamor125.github.io/Lenguaje_De_Marcas/Act3(Tablas)/imagen2.ht
 imagen3:https://casamor125.github.io/Lenguaje_De_Marcas/Act3(Tablas)/imagen3.html
 -----------------------
 Actividad 4: https://casamor125.github.io/Lenguaje_De_Marcas/Act4/actividad4.html
-<<<<<<< HEAD
 -----------------------
-=======
+Actividad 6: https://casamor125.github.io/Lenguaje_De_Marcas/Act6/Actividad6.html
 -----------------------
 >>>>>>> 41babcb080f0878208b593b0cdadaf02ac778bc4
