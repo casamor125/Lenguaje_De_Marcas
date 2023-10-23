@@ -20,9 +20,9 @@ Actividad 6: https://casamor125.github.io/Lenguaje_De_Marcas/Act6/Actividad6.htm
 -----------------------
 Actividad 7: https://casamor125.github.io/Lenguaje_De_Marcas/Act7/Actividad7.html
 -----------------------
-Actividad 8: https://casamor125.github.io/Lenguaje_De_Marcas/Act8/Actividad7.html
+Actividad 8: https://casamor125.github.io/Lenguaje_De_Marcas/Act8/Actividad8.html
 -----------------------
-Actividad 9: https://casamor125.github.io/Lenguaje_De_Marcas/Act9/Actividad7.html
+Actividad 9: https://casamor125.github.io/Lenguaje_De_Marcas/Act9/Actividad9.html
 -----------------------
 
 >>>>>>> 41babcb080f0878208b593b0cdadaf02ac778bc4
