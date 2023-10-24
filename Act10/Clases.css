@@ -1,0 +1,37 @@
+.body{
+background-color: #F3F4F6;
+font-family:arial;
+margin: 0;
+padding: 0;
+}
+.panel {
+    
+    text-align:center;
+    color: #333;
+    background-color: #E0E0E0;
+    padding-bottom: 20px;
+    padding-top: 20px;
+ }
+ .subtitulo{
+
+   padding-bottom: 10px;
+   padding-top: 10px;
+   margin-left: 20;
+   color: #555;
+
+ }
+ .destacat{
+   font-weight: bold;
+   color: #FF5733;
+   font-size: 150%;
+ }
+ .ul{
+   list-style-type: circle;
+   margin-left:40px;
+
+ }
+ .li{
+   color: #666;
+   margin-bottom:10px;
+ }
+ 
