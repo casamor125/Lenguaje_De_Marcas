@@ -1,0 +1,26 @@
+.seccio-noticies{
+
+    padding: 0;
+}
+.encapçalament{
+
+    background-color: #444;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    text-align: center ;
+}
+.imatges{
+
+    width: 100px;
+    float: left;
+}
+.titol_Noticies{
+
+font-weight: bold;
+color: darkblue;
+}
+.textos{
+    font-family: 'Times New Roman', Times, serif;
+    margin:20px;
+    margin-inline: 5px;
+}
