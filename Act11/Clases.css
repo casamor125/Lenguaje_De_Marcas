@@ -24,3 +24,18 @@ color: darkblue;
     margin:20px;
     margin-inline: 5px;
 }
+.enllaços{
+    text-decoration: none;
+    color: #006102;
+}
+.enllaços:hover{
+    text-decoration: underline;
+    color: #be188c;
+}
+.noticia{
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid rgb(84, 80, 80) 1px;
+    padding: 5px;
+    margin: 5px;
+}
