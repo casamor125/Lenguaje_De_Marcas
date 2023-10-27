@@ -1,0 +1,41 @@
+.Cuerpo{
+
+    background-color: rgb(84, 155, 152);
+ 
+}
+.Contenedor{
+
+    display: flex;
+    flex-direction: row;
+}
+.Naveg{
+
+background-color: rgb(214, 194, 169);
+width: 150px;
+height: 200px;
+padding-left: 5px;
+border-radius: 5%;
+display: flex;
+flex-direction: column;
+}
+.Links{
+
+    margin-bottom: 5px ;
+    
+}
+.main{
+
+    padding-left:5px;
+    padding-right: 5px;
+    background-color: rgb(192, 149, 132);
+    border-radius: 3%;
+
+}
+.footer{
+
+    height: 25px;
+    background-color:  rgb(43, 108, 104);
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 5%;
+}
