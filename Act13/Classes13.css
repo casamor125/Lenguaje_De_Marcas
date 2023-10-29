@@ -20,13 +20,13 @@
 }
 
 .main {
-
-    padding-left: 5px;
-    padding-right: 5px;
+    float: none;
+    padding:5px;
     background-color: rgb(192, 149, 132);
     border-radius: 3%;
-    
     margin-left: 305px;
+    height: auto ;
+    display: table;
 
 }
 
@@ -39,8 +39,22 @@
     border-radius: 5%;
     
 }
-.experimento{
 
-    margin-bottom: -15px ;
-
+.fotos{
+    
+    width: 100px;
+    height: 150px;
+    margin: 0 auto;
 }
+.contenedores{
+    width: 150px;
+    height: auto;
+    background-color: antiquewhite;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    float: left;
+    border-radius: 5%;
+    margin: 5px;
+}
+
