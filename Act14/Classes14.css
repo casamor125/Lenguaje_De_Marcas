@@ -1,0 +1,26 @@
+.cont{
+
+    display: flex;
+    flex-direction: row ;
+    background-color: antiquewhite;
+    justify-content: space-between;
+    align-items: center;
+    padding:5px;
+    border-radius: 5px;
+    
+}
+.links:hover{
+
+    color: rgb(185, 62, 62) ;
+    align-self: flex-start; 
+    transition: all 1s ease-out ;
+    font-size: large;
+
+}
+
+.barra{
+
+    border-radius: 5px;
+}
+
+
