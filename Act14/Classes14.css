@@ -1,4 +1,4 @@
-.cont{
+div{
 
     display: flex;
     flex-direction: row ;
@@ -19,7 +19,7 @@
 
 }
 
-.barra{
+.nav{
 
     border-radius: 5px;
 }
