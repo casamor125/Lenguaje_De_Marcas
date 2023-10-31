@@ -1,0 +1,45 @@
+body{
+
+    background-color:aquamarine;
+    
+}
+.perfiles{
+
+    background-color: antiquewhite;
+    height: 400px;
+    width: 250px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform .2s;
+
+}
+.perfiles:hover{
+    
+    transform: scale(1.05);
+}
+div{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+h1{
+text-align: center;
+
+}
+img{
+
+    border-radius: 100%;
+    width: 225px;
+    align-self: center;
+    margin-top: 5px;
+}
+h3{
+color: rgba(31, 181, 131, 0.767);
+
+}
+.carrec{
+color: blueviolet;
+
+}
