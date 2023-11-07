@@ -1,0 +1,25 @@
+main{
+
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    overflow: hidden;
+}
+article{
+    margin: 10px;
+    background-color: cornflowerblue;
+    height: auto;
+    text-align:  center;
+    border-radius: 5px;
+}
+article:hover{
+    
+    transform: scale(1.05);
+}
+img{
+
+width: 100%;
+border-left: 5px;
+border-radius:5px ;
+}
