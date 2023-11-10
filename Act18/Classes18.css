@@ -1,0 +1,17 @@
+body{
+
+        background-color: rgb(245, 158, 51);
+    
+}  
+@media screen and (min-width:800px) and (max-width: 1000px) {
+        /* Estils per a pantalles amb una amplada màxima de 600px */ 
+        body {
+        background-color: rgb(216, 112, 31); 
+        }
+}
+@media screen and(min-width:600px)and(max-width: 799px) {
+    body{
+        background-color: rgb(196, 72, 38);
+
+    }
+}

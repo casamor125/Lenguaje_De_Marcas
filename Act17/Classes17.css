@@ -13,11 +13,13 @@ nav{
 grid-area: nav;
 background-color: aquamarine;
 color: rgb(255, 255, 255);
+padding-left: 10px;
 }
 footer{
     grid-area: footer;
 background-color: blue;
 color: rgb(255, 255, 255);
+padding-left: 10px;
 
 }
 aside{
@@ -25,10 +27,16 @@ aside{
     background-color: cyan;
     display: grid;
     grid-template-rows: repeat(4,0fr);
+    padding-left: 10px;
 }
 main{
     grid-area: main;
 background-color: darksalmon;
 padding-left: 10px;
 
+
+}
+.enlaces{
+    padding: 0;
+    text-align: center;
 }
