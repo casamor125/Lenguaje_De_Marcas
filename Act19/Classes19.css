@@ -1,0 +1,55 @@
+div{
+
+    display: flex;
+    flex-direction: row ;
+    background-color: antiquewhite;
+    justify-content: space-between;
+    align-items: center;
+    padding:5px;
+    border-radius: 5px;
+    
+}
+.links:hover{
+
+    color: rgb(185, 62, 62) ;
+    align-self: flex-start; 
+    transition: all 1s ease-out ;
+    font-size: large;
+    text-decoration: none;
+
+}
+
+.nav{
+
+    border-radius: 5px;
+}
+.boton{
+    display:none;
+}
+@media screen and (max-width: 1024px) {
+
+   
+   .enlaces{
+    display: none;
+   }
+    .boton{
+
+        display: block;
+    }
+}
+@media screen and (max-width: 430px) {
+
+   
+    .enlaces{
+     display: none;
+    }
+    .nav{
+        display:none;
+    }
+     .boton{
+ 
+         display: block;
+     }
+ }
+
+
