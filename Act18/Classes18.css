@@ -1,17 +1,51 @@
-body{
+body {
 
-        background-color: rgb(245, 158, 51);
-    
-}  
-@media screen and (min-width:800px) and (max-width: 1000px) {
-        /* Estils per a pantalles amb una amplada màxima de 600px */ 
-        body {
-        background-color: rgb(216, 112, 31); 
-        }
+    background-color: rgb(245, 158, 51);
 }
-@media screen and(min-width:600px)and(max-width: 799px) {
-    body{
-        background-color: rgb(196, 72, 38);
 
+.ancho {
+    content:"sa finestra te una amplada mayor a 1300px";
+}
+
+@media screen and (max-width: 1300px) {
+
+    /* Estils per a pantalles amb una amplada màxima de 600px */
+    body {
+
+        background-color: rgb(216, 31, 117);
+    }
+
+    .ancho::after {
+        content: "ara l'ample de sa finestra es menor a 1300 px";
+
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        background-color: blue;
+
+    }
+    .ancho::after{
+        content:"ara l'ample de sa finestra es menor a 1000 px";
+    }
+}
+@media screen and (max-width: 800px) {
+    body {
+        background-color: rgb(43, 255, 0);
+
+    }
+    .ancho::after{
+        content:"ara l'ample de sa finestra es menor a 800 px";
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background-color: rgb(255, 0, 0);
+
+    }
+    .ancho::after{
+        content:"ara l'ample de sa finestra es menor a 600 px";
     }
 }
