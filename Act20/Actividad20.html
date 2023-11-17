@@ -6,9 +6,9 @@
     <title>Actividad 20</title>
     <link rel="stylesheet" href="Classes20.css">
 </head>
-<body>
+<body class="flexC">
 
-    <nav>
+    <nav class="flexR ">
         <h3>CideTech</h3>
         <enlaces class = "enlaces">
         <a class="links" href="#Inici">Inici</a>
@@ -18,15 +18,15 @@
         <a class="links" href="#Contacte">Contacte</a>
         </enlaces>
         <barra>
-            <input class="radio" type="text" placeholder="Cerca...">
+            <input class="cercar" type="text" placeholder="Cerca...">
         </barra>
         <boton class="boton">
             <input type="button" value="☰">
         </boton>
     </nav>
-    <div id="Sobre" class="sobre_nos , fondo">
+    <div id="Sobre" class="sobre_nos , fondo  , flexR">
         <div class="div_sobre" >
-            <h1>Sober Nosaltres</h1>
+            <h1>Sobre Nosaltres</h1>
             <p> Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod 
                 tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim 
                 veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
@@ -39,37 +39,37 @@
         <img class = "grande , sombreado" src="https://picsum.photos/400/400" alt="">
     </div>
     <h1 id="Serveis">Els Nostres Serveis</h1>
-    <div class="nostres_serveis">
+    <div class="nostres_serveis , flexR">
         
-        <article>
-            <img src="https://picsum.photos/200/300" alt="">
+        <article class="ancho">
+            <img src="diseno-grafico.png" alt="">
             <h4 class="color_nos">Disseny Grafic</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua.</p>
         </article>
-        <article>
-            <img src="https://picsum.photos/200/300" alt="">
+        <article class="ancho">
+            <img src="desarrollo-de-juegos.png" alt="">
             <h4 class="color_nos">Desenvolupament Web i videojocs</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua.</p>
         </article>
-        <article>
-            <img src="https://picsum.photos/200/300" alt="">
+        <article class="ancho">
+            <img src="seo.png" alt="">
             <h4 class="color_nos">SEO i marqueting digital</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua.</p>
         </article>
-        <article>
-            <img src="https://picsum.photos/200/300" alt="">
+        <article class="ancho">
+            <img src="soporte-tecnico.png" alt="">
             <h4 class="color_nos">Suport tècnic</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua.</p>
         </article>
 
     </div>
-    <h1 class="fondo" id="Portfolio">El Nostre Portfolio</h1>
-    <div class="nostres_serveis , fondo">
-        
+    
+    <div class="nostres_serveis , fondo , flexR">
+        <h1 class="fondo" id="Portfolio">El Nostre Portfolio</h1>   
         <article>
             <img src="https://picsum.photos/200/300" alt="">
             <h4 class="color_nos">Disseny Grafic</h4>
@@ -90,8 +90,8 @@
         </article>
        
     </div>
-    <div id="Contacte" class="contacte">
-        <h3 class="centrado">Contacta'ns</h3>
+    <div id="Contacte" class="contacte , flexC">
+        <h2 class="centrado">Contacta'ns</h2>
         <p class="centrado">Si tens qualque dubte no dubtis en contactar amb nosaltres mitjançant aquest questionari</p>
 
 
@@ -103,13 +103,13 @@
         <textarea class="marg_bot"  id="Texto" name="Texto" rows="4" cols="50" ></textarea>
 
     </div>
-    <footer class="color_foot">
-        <div class="info">
+    <footer class="blanco , flexC">
+        <div class="info , flexR">
             <div class="ancho">
                 <h4>CideTech</h4>
                 <p>CIDETech es una empresa lider en solucions tecnològiques i dedicada a portar les darreres innovacions al mercat</p>
             </div>
-            <div class="ancho">
+            <div class="ancho , flexC">
                 <h4>Navegació</h4>
                 <a class="links , color_foot" href="#Sobre">Sobre nosaltres</a>
                 <a class="links , color_foot" href="#Serveis">Serveis</a>
@@ -124,6 +124,10 @@
             </div>
             <div class="ancho">
                 <h4>Xarxes socials</h4>
+                <img class="logo , blanco" src="instagram.png" alt="">
+                <img class="logo , blanco" src="gorjeo.png" alt="">
+                <img class="logo , blanco" src="facebook.png" alt="">
+                <img class="logo , blanco" src="linkedin.png" alt="">
             </div>
             
         </div>
