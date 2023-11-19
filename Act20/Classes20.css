@@ -89,13 +89,14 @@ flex-wrap: wrap;
 
 }
 .color_nos{
-color: aqua;
+color: rgb(109, 78, 249)
 
 }
 .fondo{
 
-    background-color: azure;
+    background-color: rgb(214, 214, 214);
 }
+
 .contacte{
 
     align-self: center;
@@ -109,6 +110,9 @@ color: aqua;
 .marg_bot{
     margin-bottom: 3%;
 }
+.marg_top{
+    margin-top: 5px;
+}
 .bold{
     font-weight:bold ;
 }
@@ -120,14 +124,14 @@ width: 100%;
 background-color: rgb(12, 10, 10);
 
 }
-.info{
+.Sp-ev{
 
 justify-content: space-evenly;
 
 }
 .sombreado{
 
-    box-shadow: 0px 4px 10px 4px black;
+    box-shadow: 3px 3px 8px rgb(112, 112, 112);
 }
 .ancho{
     width:250px;
@@ -135,9 +139,11 @@ justify-content: space-evenly;
 .blanco{
     color: white;
 }
-h1{
+.fondo_blanco{
+    background-color: white;
+}
+.Width100{
     width:100%;
-    
 }
 .logo{
 width: 20px;
@@ -152,3 +158,11 @@ height: 20px;
     display: flex;
     flex-direction: row;
 }
+.wh10x10{
+    height: 100px;
+    width: 100px;
+}
+.pad_bot{
+    padding-bottom: 15px;
+}
+
