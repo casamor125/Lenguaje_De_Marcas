@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <p id="">Lorem ipsum y sus movidas raras</p>
+    <p>Lorem ipsum y sus movidas raras</p>
+    </div>
+    <div>
+        <button onclick="Grande()">Grande</button>
+        <button onclick="Pequeño()">Pequeñito</button>
+    </div>
+    <script>
+        function Pequeño() {
+           let parrafos =  document.querySelectorAll("p")
+           for  (const parrafo of parrafos) {
+            parrafo.style.fontSize = "2px"}
+           
+        
+        }
+        function Grande() {
+           let parrafos =  document.querySelectorAll("p")
+           for  (const parrafo of parrafos) {
+            parrafo.style.fontSize = "20px"}
+           
+            
+        }
+    </script>
+</body>
+</html>
