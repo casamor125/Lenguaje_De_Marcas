@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <button onclick="aparecer()"> Creador de divs </button>
+        <button onclick="desaparecer()"> Destructor de divs</button>
+
+    </div>
+    <script>
+
+        let nuevoDiv;
+
+        function aparecer() {
+            nuevoDiv = document.createElement("div");
+            nuevoDiv.style.backgroundColor = "cyan";
+            nuevoDiv.textContent = "Esto solo es una prueba";
+            document.body.appendChild(nuevoDiv);
+            
+        }
+        function desaparecer() {
+            document.body.removeChild(nuevoDiv);
+
+        }
+
+    </script>
+</body>
+
+</html>
