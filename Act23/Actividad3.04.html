@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="traducido">Aquest paragraf esta en català</p>
+    <button onclick="traductor()">traductor</button>
+    <button id="cambiado" onmouseover="cambiacolor()" onmouseleave="cambiacolor()">cambiante</button>
+    <script>
+        let catalan = true;
+        let color = true;
+        function traductor() {
+            let parrafo = document.getElementById("traducido");
+
+            if (catalan) {
+                parrafo.textContent = "Este párrafo está en castellano";
+                catalan = false;
+            } else {
+                parrafo.textContent = "Aquest paràgraf està en català";
+                catalan = true;
+            }
+        }
+        function cambiacolor(){
+
+            let boton = document.getElementById("cambiado");
+            let colorNormal = boton.style.backgroundColor;
+            if(color){
+            boton.style.backgroundColor = "blue";
+            color = false;
+            }else {
+                boton.style.backgroundColor = "lightgray";
+                color = true;
+            }
+
+        }
+    </script>
+</body>
+</html>
