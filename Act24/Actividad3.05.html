@@ -4,8 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="Clases05.css">
 </head>
 <body>
-    
+    <h1 class="feo"> EL TITULO</h1>
+    <p >El primer boton me pondra más bonito el otro pondra el titulo mas cutre</p>
+    <button onclick="Nuevaclase()">El primer boton</button>
+    <button onclick="Quitarclase()"> El otro</button>
+
+    <script>
+
+        function Nuevaclase (){
+            let element = document.querySelector("p");
+            element.classList.add("bonito");
+        }
+        function Quitarclase(){
+            let element = document.querySelector("h1");
+            element.classList.remove("feo")
+
+        }
+    </script>
 </body>
 </html>

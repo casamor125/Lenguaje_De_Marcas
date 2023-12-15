@@ -10,7 +10,7 @@
 <body>
     <div>
         <button onclick="aparecer()"> Creador de divs </button>
-        <button onclick="desaparecer()"> Destructor de divs</button>
+        <button onclick="desaparecer()"> Destructor del ultimo div</button>
 
     </div>
     <script>
@@ -25,8 +25,11 @@
             
         }
         function desaparecer() {
-            document.body.removeChild(nuevoDiv);
-
+            let hijos = document.body.childNodes;
+            let Ultimo = hijos[hijos.length-1];
+            
+            document.body.removeChild(Ultimo);
+            
         }
 
     </script>
