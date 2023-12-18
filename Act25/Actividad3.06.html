@@ -1,53 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="Clases3.06.css">
 </head>
+
 <body>
-    <p onclick="Alerta()" >palabra</p> 
+    <p onclick="Alerta()">palabra</p>
     <p onclick="Alerta()">no se que poner sin que introduzca el nombre designado</p>
     <p onclick="Alerta()"> aqui si que decimos la palabra</p>
     <button onclick="CambiaP()">Cambiador de Color</button>
-    
+
     <script>
         var clicado = true;
-        subrayado = true
+
         function CambiaP() {
             let elementosP = document.body.querySelectorAll("p");
 
-            elementosP.forEach(function(parrafo) {
+            elementosP.forEach(function (parrafo) {
                 var contenido = parrafo.textContent;
                 var palabra = "palabra";
                 var Longitud_de_cambio = 20
-                if ((contenido.includes(palabra) || contenido.length>Longitud_de_cambio) && subrayado) {
+                if ((contenido.includes(palabra) || contenido.length > Longitud_de_cambio) && !parrafo.classList.contains("cambiaColor")) {
                     parrafo.classList.add("cambiaColor");
-                    subrayado = false;
-                }else{
+
+                } else {
                     parrafo.classList.remove("cambiaColor");
-                    subrayado = true; 
+
                 }
             });
         }
 
         function Alerta() {
-            if(clicado){
-           var Mensaje = document.createElement("div")
-           Mensaje.innerText = "Cuidado estas clicando un paragrafo"          
-           document.body.appendChild(Mensaje);
-           Mensaje.classList.add("Alerta");
-           clicado = false;
-            }else{
+            if (clicado) {
+                var Mensaje = document.createElement("div")
+                Mensaje.innerText = "Cuidado estas clicando un paragrafo"
+                document.body.appendChild(Mensaje);
+                Mensaje.classList.add("Alerta");
+                clicado = false;
+            } else {
                 clicado = true;
                 let hijos = document.body.childNodes;
-                let Ultimo = hijos[hijos.length-1];
-            
+                let Ultimo = hijos[hijos.length - 1];
+
                 document.body.removeChild(Ultimo);
 
             }
         }
     </script>
 </body>
+
 </html>
