@@ -15,15 +15,15 @@
     <button onclick="CambiaP()">Cambiador de Color</button>
 
     <script>
-        var clicado = true;
+        let clicado = true;
 
         function CambiaP() {
             let elementosP = document.body.querySelectorAll("p");
 
             elementosP.forEach(function (parrafo) {
-                var contenido = parrafo.textContent;
-                var palabra = "palabra";
-                var Longitud_de_cambio = 20
+                let contenido = parrafo.textContent;
+                let palabra = "palabra";
+                let Longitud_de_cambio = 20
                 if ((contenido.includes(palabra) || contenido.length > Longitud_de_cambio) && !parrafo.classList.contains("cambiaColor")) {
                     parrafo.classList.add("cambiaColor");
 
@@ -36,7 +36,7 @@
 
         function Alerta() {
             if (clicado) {
-                var Mensaje = document.createElement("div")
+                let Mensaje = document.createElement("div")
                 Mensaje.innerText = "Cuidado estas clicando un paragrafo"
                 document.body.appendChild(Mensaje);
                 Mensaje.classList.add("Alerta");
