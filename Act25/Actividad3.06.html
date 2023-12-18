@@ -7,22 +7,47 @@
     <link rel="stylesheet" href="Clases3.06.css">
 </head>
 <body>
-    <p onmouseover="Alerta()"></p>
-    <button></button>
-    <button></button>
+    <p onclick="Alerta()" >palabra</p> 
+    <p onclick="Alerta()">no se que poner sin que introduzca el nombre designado</p>
+    <p onclick="Alerta()"> aqui si que decimos la palabra</p>
+    <button onclick="CambiaP()">Cambiador de Color</button>
+    
     <script>
-        function CambiaP(){
-            let element = document.body.querySelectorAll("p")
-            if(palabra){
+        var clicado = true;
+        subrayado = true
+        function CambiaP() {
+            let elementosP = document.body.querySelectorAll("p");
 
-                element.classList.add("cambiaColor");
+            elementosP.forEach(function(parrafo) {
+                var contenido = parrafo.textContent;
+                var palabra = "palabra";
+                var Longitud_de_cambio = 20
+                if ((contenido.includes(palabra) || contenido.length>Longitud_de_cambio) && subrayado) {
+                    parrafo.classList.add("cambiaColor");
+                    subrayado = false;
+                }else{
+                    parrafo.classList.remove("cambiaColor");
+                    subrayado = true; 
+                }
+            });
+        }
+
+        function Alerta() {
+            if(clicado){
+           var Mensaje = document.createElement("div")
+           Mensaje.innerText = "Cuidado estas clicando un paragrafo"          
+           document.body.appendChild(Mensaje);
+           Mensaje.classList.add("Alerta");
+           clicado = false;
+            }else{
+                clicado = true;
+                let hijos = document.body.childNodes;
+                let Ultimo = hijos[hijos.length-1];
+            
+                document.body.removeChild(Ultimo);
+
             }
         }
-        function Alerta(){
-            
-
-        }
-
     </script>
 </body>
 </html>
