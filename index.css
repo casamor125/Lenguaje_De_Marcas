@@ -1,0 +1,41 @@
+.actividades{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 3%;
+    padding: 20px;
+}
+.flex_row_arround{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.text-center{
+text-align: center;
+
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(185, 62, 62) ;
+    align-self: flex-start; 
+    transition: all 0.5s ease-out ;
+    font-size:larger;    
+}
+.fondo{
+    background-color:azure;
+}
+.flex_row_wrap{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.margin_rigth_20{
+    margin-right: 20px;
+}
+.act_width{
+    width: 325px;
+}
