@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     background-color: white;
-    border-radius: 3%;
+    border-radius: 20px;
     padding: 20px;
 }
 .flex_row_arround{
@@ -24,7 +24,7 @@ a:hover{
     font-size:larger;    
 }
 .fondo{
-    background-color:azure;
+    background-color:#a2e8e8;
 }
 .flex_row_wrap{
     display: flex;
