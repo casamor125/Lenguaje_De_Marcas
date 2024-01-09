@@ -21,7 +21,7 @@ a:hover{
     color: rgb(185, 62, 62) ;
     align-self: flex-start; 
     transition: all 0.5s ease-out ;
-    font-size:larger;    
+    font-size:large;    
 }
 .fondo{
     background-color:#a2e8e8;
