@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad Hamburguesa</title>
+    <link rel="stylesheet" href="Clases3.07.css">
+</head>
+<body class="flexC margin0">
+    <div id="desplegable" class = "enlaces-menu azul">
+        <a onclick="Adios_hamburguesa()" class="links" href="#Inici">Inici</a>
+        <a onclick="Adios_hamburguesa()"  class="links" href="#Sobre">Sobre nosaltres</a>
+        <a onclick="Adios_hamburguesa()"  class="links" href="#Serveis">Serveis</a>
+        <a onclick="Adios_hamburguesa()"  class="links" href="#Portfolio">Portfolio</a>
+        <a onclick="Adios_hamburguesa()"  class="links" href="#Contacte">Contacte</a>
+        </div>
+
+    <nav class="flexR azul">
+        <h3>CideTech</h3>
+        <enlaces class = "enlaces">
+        <a class="links" href="#Inici">Inici</a>
+        <a class="links" href="#Sobre">Sobre nosaltres</a>
+        <a class="links" href="#Serveis">Serveis</a>
+        <a class="links" href="#Portfolio">Portfolio</a>
+        <a class="links" href="#Contacte">Contacte</a>
+        </enlaces>
+        <barra>
+            <input class="cercar" type="text" placeholder="Cerca...">
+        </barra>
+        <boton class="boton" onclick="hamburguesa()">
+            <input type="button" value="☰">
+        </boton>
+       
+    </nav>
+    <div id="Sobre" class="sobre_nos , fondo  , flexR , heigth25 , wrap">
+        <div class="div_sobre" >
+            <h1 class="Width100 , margL_100">Sobre Nosaltres</h1>
+            <p class="margL_100"> Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod 
+                tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim 
+                veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+                nisi ut aliquid </p>
+                <p class="margL_100 "> Quis aute iure reprehenderit
+                    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                    sint obcaecat cupiditat non proident, sunt in culpa qui officia
+                    </p>
+        </div>
+       <div class="width50 centrado">
+        <img class = "radius_ligero , sombreado , width_auto , marg_top" src="https://picsum.photos/400/400" alt="">
+    </div> 
+    </div>
+    <h1 class="margL_100" id="Serveis">Els Nostres Serveis</h1>
+    <div class="nostres_serveis , flexR ,  marg_bot , marg_top , heigth25 , wrap">
+        
+        <article class="width2-4 , fondo , sombreado">
+            <img class="wh10x10 , marg_top" src="diseno-grafico.png" alt="">
+            <h4 class="color_nos">Disseny Grafic</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p>
+        </article>
+        <article class="width2-4 , fondo , sombreado">
+            <img class="wh10x10 , marg_top" src="desarrollo-de-juegos.png" alt="">
+            <h4 class="color_nos">Desenvolupament Web i videojocs</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p>
+        </article>
+        <article class="width2-4 , fondo , sombreado">
+            <img class="wh10x10 , marg_top" src="seo.png" alt="">
+            <h4 class="color_nos">SEO i marqueting digital</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p>
+        </article>
+        <article class="width2-4 , fondo , sombreado">
+            <img class="wh10x10 , marg_top" src="soporte-tecnico.png" alt="">
+            <h4 class="color_nos">Suport tècnic</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p>
+        </article>
+
+    </div>
+    
+    <div class="nostres_serveis , fondo , flexR , pad_bot , heigth25 , wrap">
+        <h1 class="Width100 , margL_100" id="Portfolio">El Nostre Portfolio</h1>   
+        <article class="pad_bot , fondo_blanco , width400 , radius_ligero">
+            <img class="Width100 , top_radius , heigth350" src="https://picsum.photos/200/300" alt="">
+            <h3 class="color_nos">Projecte 1</h3>
+            <p>Descripció breu del projecte.</p>
+                <a class="links" href="#">Veure detalls</a>
+        </article>
+        <article class="pad_bot , fondo_blanco , width400 , radius_ligero">
+            <img class="Width100 , top_radius , heigth350" src="https://picsum.photos/200/300" alt="">
+            <h3 class="color_nos">Projecte 2</h3>
+            <p>Descripció breu del projecte.</p>
+                <a class="links" href="#">Veure detalls</a>
+        </article>
+        <article class="pad_bot , fondo_blanco , width400 , radius_ligero">
+            <img class="Width100 , top_radius , heigth350" src="https://picsum.photos/200/300" alt="">
+            <h3 class="color_nos">Projecte 3</h3>
+            <p>Descripció breu del projecte.</p>
+                <a class="links" href="#">Veure detalls</a>
+        </article>
+       
+    </div>
+    <div id="Contacte" class="contacte , flexC , heigth25">
+        <h2 class="centrado">Contacta'ns</h2>
+        <p class="centrado">Si tens qualque dubte no dubtis en contactar amb nosaltres mitjançant aquest questionari</p>
+
+
+        <label class="bold" for="fname">Nom:</label>
+        <input class="marg_bot" type="text" id="name" name="name" >
+        <label class="bold" for="mail">Correu electrònic:</label>
+        <input class="marg_bot" type="text" id="mail" name="mail" >
+        <label class="bold" for="texto">Missatge:</label>
+        <textarea class="marg_bot"  id="Texto" name="Texto" rows="4" cols="50" ></textarea>
+        <input class="azul marg_bot" type="button" value="enviar missatge">
+
+    </div>
+    <footer class="blanco , flexC ">
+        <div class=" flexR , wrap , Sp-ev , margL_leve">
+            <div class="width2-3">
+                <h4 >CideTech</h4>
+                <p>CIDETech es una empresa lider en solucions tecnològiques i dedicada a portar les darreres innovacions al mercat</p>
+            </div>
+            <div class="width2-3 , flexC ">
+                <h4>Navegació</h4>
+                <a class="links , color_foot" href="#Sobre">Sobre nosaltres</a>
+                <a class="links , color_foot" href="#Serveis">Serveis</a>
+                <a class="links , color_foot" href="#Portfolio">Portfolio</a>
+                <a class="links , color_foot" href="#Contacte">Contacta'ns</a>
+            </div>
+            <div class="width2-3">
+                <h4>Contacta'ns</h4>
+                <p>971 606 499</p>
+                <p>info@cidetech.com</p>
+                <p>Carrer de l'Arner 3, Palma</p>
+            </div>
+            <div class="width2-3">
+                <h4>Xarxes socials</h4>
+                <img class="logo , blanco" src="instagram.png" alt="">
+                <img class="logo , blanco" src="gorjeo.png" alt="">
+                <img class="logo , blanco" src="facebook.png" alt="">
+                <img class="logo , blanco" src="linkedin.png" alt="">
+            </div>
+            
+        </div>
+       <p class="centrado">© 2023 CIDETech | Dissenyat per <a href="#correo">@bielcasamor02@gmail.com</a></p>
+    </footer>
+   
+    <script>
+
+        function hamburguesa(){
+            let menu = document.getElementById("desplegable");
+            menu.classList.toggle("abierto");
+
+        }
+        function Adios_hamburguesa(){
+            let menu = document.getElementById("desplegable");
+            menu.classList.toggle("abierto");
+        }
+
+    </script>
+</body>
+</html>
