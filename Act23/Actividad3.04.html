@@ -9,11 +9,18 @@
 
 <body>
     <p id="traducido">Aquest paragraf esta en català</p>
-    <button onmouseover="traductor()">traductor</button>
-    <button id="cambiado" onmouseover="cambiacolor()" onmouseleave="cambiacolor()">cambiante</button>
+    <button id="traductorBtn">traductor</button>
+    <button id="cambiado" >cambiante</button>
     <script>
         let catalan = true;
         let color = true;
+
+        document.getElementById("traductorBtn").addEventListener('click', traductor);
+
+        // Añadir event listener para el botón de cambio de color
+        document.getElementById("cambiado").addEventListener('mouseover', cambiacolor);
+        document.getElementById("cambiado").addEventListener('mouseleave', cambiacolor);
+
         function traductor() {
             let parrafo = document.getElementById("traducido");
 
