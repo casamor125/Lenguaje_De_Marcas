@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="Clases.3.08.css">
+</head>
+<body class="FlexC">
+    <div id="creador" class="FlexC marginBot">
+    <textarea id="mensaje" cols="30" rows="10" class=" centrado marginBot" onenter></textarea>
+    <button id="añadir" class=" centrado" onclick="añadir()">Añadir Tarea</button>
+    </div>
+
+    <script>
+        let nuevoboton;
+        
+        document.getElementById("mensaje").addEventListener("keypress",function(event) {
+  
+      if (event.key === "Enter") {
+        añadir();
+      }
+    });
+        function añadir(){
+
+            nuevoboton = document.createElement("button");
+            nuevoboton.textContent = "Esto";
+            nuevoboton.classList.add("novaClasse");("toDo");
+            document.body.appendChild(nuevoboton);
+            nuevoboton.addEventListener("click",doing)
+            
+        }
+        function doing(){
+            // nuevoboton = document.createElement("button");
+            // nuevoboton.textContent = "Esto";
+            // nuevoboton.addEventListener("click",done())
+            let hijos = document.body.childNodes;
+            let Ultimo = hijos[hijos.length-1];
+            nuevoboton.classList.add("novaClasse");("doing");
+            Ultimo.classList.toggle("toDo");
+
+        }
+        function done(){
+            nuevoboton = document.createElement("button");
+            nuevoboton.textContent = "Esto";
+            nuevoboton.classList.toggle("done");
+            Ultimo.classList.toggle("doing");
+            
+            
+
+        }
+        function erase(){
+
+            elemento.parentNode.remove();
+
+            if(done = true){
+                let hijos = document.body.childNodes;
+                let Ultimo = hijos[hijos.length-1];
+                document.body.removeChild(Ultimo);
+                             
+            }
+
+        }
+        function eraseAll() {
+      // Obtén la lista de elementos con la clase "miClase"
+        var done = document.getElementsByClassName("done");
+
+      // Itera sobre la lista y elimina cada elemento
+        while (done.length > 0) {
+        done[0].parentNode.removeChild(elementos[0]);
+         }
+        }
+    </script>
+</body>
+</html>
