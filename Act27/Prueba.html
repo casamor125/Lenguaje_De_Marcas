@@ -13,6 +13,9 @@
     <div id="myDIV" class="header">
         <input type="text" id="myInput" placeholder="Title...">
         <span onclick="newElement()" class="addBtn">Add</span>
+        <button onclick="desaparecerListos()">To do ones</button>
+        <button onclick="desaparecerNoListos()">Done ones</button>
+        <button onclick="EliminarTodos()">Delete All</button>
     </div>
 
     <ul id="myUL">
@@ -35,6 +38,7 @@
         list.addEventListener('click', function (ev) {
             if (ev.target.tagName === 'LI') {
                 ev.target.classList.toggle('checked');
+                ev.target.classList.toggle('notchecked');
             }
         }, false);
 
@@ -43,33 +47,68 @@
             if (event.key === "Enter") {
                 newElement();
             }
-            });
-            // Create a new list item when clicking on the "Add" button
-            function newElement() {
-                var li = document.createElement("li");
-                var inputValue = document.getElementById("myInput").value;
-                var t = document.createTextNode(inputValue);
-                li.appendChild(t);
-                if (inputValue === '') {
+        });
+        // Create a new list item when clicking on the "Add" button
+        function newElement() {
+            var li = document.createElement("li");
+            li.classList.add("notchecked");
+            var inputValue = document.getElementById("myInput").value;
+            var t = document.createTextNode(inputValue);
+            li.appendChild(t);
+            if (inputValue === '') {
 
-                } else {
-                    document.getElementById("myUL").appendChild(li);
-                }
-                document.getElementById("myInput").value = "";
+            } else {
+                document.getElementById("myUL").appendChild(li);
+            }
+            document.getElementById("myInput").value = "";
 
-                var span = document.createElement("SPAN");
-                var txt = document.createTextNode("\u00D7");
-                span.className = "close";
-                span.appendChild(txt);
-                li.appendChild(span);
+            var span = document.createElement("SPAN");
+            var txt = document.createTextNode("\u00D7");
+            span.className = "close";
+            span.appendChild(txt);
+            li.appendChild(span);
 
-                for (i = 0; i < close.length; i++) {
-                    close[i].onclick = function () {
-                        var div = this.parentElement;
-                        div.style.display = "none";
-                    }
+            for (i = 0; i < close.length; i++) {
+                close[i].onclick = function () {
+                    var div = this.parentElement;
+                    div.style.display = "none";
                 }
             }
+        }
+
+        function desaparecerListos() {
+
+            var li = document.getElementsByClassName("checked")
+            var ocultos = document.getElementsByClassName("Nomostrar")
+
+            for (i = 0; i < li.length; i++) {
+                li[i].classList.toggle("Nomostrar");
+
+            }
+        }
+
+        function desaparecerNoListos() {
+
+            var li = document.getElementsByClassName("notchecked")
+            var ocultos = document.getElementsByClassName("Nomostrar")
+
+            for (i = 0; i < li.length; i++) {
+                li[i].classList.toggle("Nomostrar");
+
+            }
+        }
+
+        function EliminarTodos() {
+
+            var li = document.querySelectorAll("li")
+
+            for (i = 0; i < li.length; i++) {
+                li[i].remove();
+
+            }
+        }
+
+
     </script>
 </body>
 
