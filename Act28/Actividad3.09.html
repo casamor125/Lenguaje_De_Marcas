@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Clases3.09.css">
+</head>
+
+<body>
+
+    <input type="text" id="texto" placeholder="Title...">
+    <button id="quitaComents">Quitar Comentarios</button>
+    <p>un p</p>
+    <p>otro p</p>
+    <p>tercer p</p>
+    <ul id="milista">
+
+
+    </ul>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous">
+        </script>
+    <script>
+        var checker = true;
+
+
+        $(document).on("click",function () {
+            $(".close").click(function (event) {
+
+                $(this).closest("li").remove();
+            });
+        });
+        $(document).ready(function () {
+            $("#quitaComents").click(function () {
+                if (checker == true) {
+                    $("li").hide();
+                    checker = false;
+                    $("#quitaComents").text("Mostrar Comentarios");
+                } else {
+                    $("li").show();
+                    checker = true;
+                    $("#quitaComents").text("Quitar Comentarios");
+                }
+            });
+        });
+
+        $(document).ready(function () {
+
+            $("#texto").keydown(function (event) {
+                if (event.which === 13) {
+                    var nuevoElemento = $("#texto").val();
+                    if (nuevoElemento.trim() !== "") {
+                        var nuevoLi = $("<li></li>").text(nuevoElemento).append("<button class='close'>x</button>");
+                        $("#milista").append(nuevoLi);
+                        $("#texto").val("");
+
+                    }
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $(".close").click(function (event) {
+
+                $(this).closest("li").remove();
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>

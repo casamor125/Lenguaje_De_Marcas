@@ -1,0 +1,28 @@
+li{
+    color: black;
+    text-decoration: none;
+    list-style-type: none;
+    text-align: left;
+    position: relative;
+}
+.close {
+
+    padding: 10px;
+  }
+  
+.close:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+  }
+  
+  .close:hover {
+    background-color: #f44336;
+    color: white;
+  }
