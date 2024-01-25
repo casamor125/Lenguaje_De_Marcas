@@ -9,12 +9,15 @@
 </head>
 
 <body>
-
-    <input type="text" id="texto" placeholder="Title...">
-    <button id="quitaComents">Quitar Comentarios</button>
-    <p>un p</p>
-    <p>otro p</p>
-    <p>tercer p</p>
+    <h1>Vlog Personal</h1>
+    <p>un p pequeño</p>
+    <p>otro p mas grande</p>
+    <p>un tercer p aun mas grande</p>
+    <div class="FlexR">
+        <input type="text" id="texto" placeholder="Comentario...">
+        <button id="añadir">Añadir Comentario</button>
+        <button id="quitaComents">Quitar Comentarios</button>
+    </div>
     <ul id="milista">
 
 
@@ -26,14 +29,8 @@
     <script>
         var checker = true;
 
-
-        $(document).on("click",function () {
-            $(".close").click(function (event) {
-
-                $(this).closest("li").remove();
-            });
-        });
         $(document).ready(function () {
+
             $("#quitaComents").click(function () {
                 if (checker == true) {
                     $("li").hide();
@@ -45,9 +42,6 @@
                     $("#quitaComents").text("Quitar Comentarios");
                 }
             });
-        });
-
-        $(document).ready(function () {
 
             $("#texto").keydown(function (event) {
                 if (event.which === 13) {
@@ -57,12 +51,35 @@
                         $("#milista").append(nuevoLi);
                         $("#texto").val("");
 
+                        $(nuevoLi).ready(function () {
+                            $(".close").click(function (event) {
+
+                                $(this).closest("li").remove();
+                            });
+                        });
+
                     }
                 }
             });
-        });
+            $("#añadir").click(function (event) {
+              
+                var nuevoElemento = $("#texto").val();
+                    if (nuevoElemento.trim() !== "") {
+                        var nuevoLi = $("<li></li>").text(nuevoElemento).append("<button class='close'>x</button>");
+                        $("#milista").append(nuevoLi);
+                        $("#texto").val("");
 
-        $(document).ready(function () {
+                        $(nuevoLi).ready(function () {
+                            $(".close").click(function (event) {
+
+                                $(this).closest("li").remove();
+                            });
+                        });
+
+                    }
+                
+            });
+
             $(".close").click(function (event) {
 
                 $(this).closest("li").remove();
