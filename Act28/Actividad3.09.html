@@ -16,7 +16,7 @@
     <div class="FlexR">
         <input type="text" id="texto" placeholder="Comentario...">
         <button id="añadir">Añadir Comentario</button>
-        <button id="quitaComents">Quitar Comentarios</button>
+        <button id="quitaComents">Ocultar Comentarios</button>
     </div>
     <ul id="milista">
 
@@ -39,7 +39,7 @@
                 } else {
                     $("li").show();
                     checker = true;
-                    $("#quitaComents").text("Quitar Comentarios");
+                    $("#quitaComents").text("Ocultar Comentarios");
                 }
             });
 
