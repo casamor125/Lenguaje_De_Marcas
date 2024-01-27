@@ -1,52 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="Classes.3.10.css">
-    
+
 </head>
+
 <body>
+
+    <h1>Biel AirReservations</h1>
+    <div class="FlexR">
+        <div class="W40">
+            <input type="text" id="precio-valor" class="Precio" readonly>
+            <div id="precio-slider" class="Precio-slider"></div>
+        </div>
+        <div class="W40">
+            <p>Date: <input type="text" id="datepicker"></p>
+        </div>
+    </div>   
+        <button>Recomendaciones</button>
+        <!-- recomendaciones -->
+        <div id="Recomendaciones" class="FlexR">
+            <div class="div"> <img src="https://picsum.photos/200/200" alt=""></div>
+            <div class="div"> <img src="https://picsum.photos/200/200" alt=""></div>
+            <div class="div"> <img src="https://picsum.photos/200/200" alt=""></div>
+            <div class="div"> <img src="https://picsum.photos/200/200" alt=""></div>
+            <div class="div"> <img src="https://picsum.photos/200/200" alt=""></div>
+        </div>
     
-    <div class="div"></div>
-    <div class="div1 none">
-        <img src="patatas-fritas.jpg" alt="">
-    </div>
-    <button>slide left</button>
-    <p>Date: <input type="text" id="datepicker"></p>
-    <div id="precio-slider"></div>
-    <input type="text" id="precio-valor" readonly>
 
-<script src="https://code.jquery.com/jquery-3.7.1.js"
-integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous">
-</script>
-<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
- 
 
-<script>
-    d=1;
-    $(document).ready(function(){
-    $("button").click(function(){
-        $(".div"+d).animate({left: '250px'}, "fast");
-        $(".div").toggle("none");
-        $(".div1").toggle("none");
-        $(".div1").animate({left: '250px'}, "fast");
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous">
+        </script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+        integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+
+
+    <script>
+        d = 1;
+        $(document).ready(function () {
+            $("button").click(function () {
+                $(".div" + d).animate({ left: '250px' }, "fast");
+                $(".div").toggle("none");
+                $(".div1").toggle("none");
+                $(".div1").animate({ left: '250px' }, "fast");
 
 
 
-    });
+            });
 
-    $("#datepicker").datepicker({
-        dateFormat: 'dd/mm/yy',  // Formato de fecha
-        showButtonPanel: true,   // Muestra un panel con botones
-        changeMonth: true,       // Permite cambiar el mes
-        changeYear: true         // Permite cambiar el año
-    });
+            $("#datepicker").datepicker({
+                dateFormat: 'dd/mm/yy',  // Formato de fecha
+                showButtonPanel: true,   // Muestra un panel con botones
+                changeMonth: true,       // Permite cambiar el mes
+                changeYear: true         // Permite cambiar el año
+            });
 
-});
+            $("#precio-slider").slider({
+                range: "min", // Especifica que es un slider de rango mínimo
+                min: 1,       // Valor mínimo del slider
+                max: 999,     // Valor máximo del slider
+                value: 50,    // Valor inicial del slider
+                slide: function (event, ui) {
+                    $("#precio-valor").val(ui.value); // Actualiza el valor mostrado mientras se desliza
+                }
+            });
+
+            // Establece el valor inicial en el campo de entrada
+            $("#precio-valor").val($("#precio-slider").slider("value"));
+        });
 
 
-</script>   
+    </script>
 </body>
+
 </html>

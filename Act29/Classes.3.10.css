@@ -1,19 +1,15 @@
 .div{
     height: 200px;
-    width:-webkit-fill-available;
+    width:200px;
     background-color: black;
     display: none;
+    margin-left: 10px;
+    border-radius: 5px;
 }
 .none{
     display: none;
 }
-.div1{
 
-    height: 200px;
-    width:auto;
-    background-color:blue;
-    border-radius: 5px;
-}
 img{
     height: 200px;
     width:auto;
@@ -26,4 +22,49 @@ img{
     background-color:brown;
     border-radius: 5px;
 
+}
+.FlexR{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+    width:-webkit-fill-available;
+  }
+h1{
+    background-color: cyan;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0;
+}
+body{
+   padding: 0;
+   margin: 0;
+   display: flex;
+   flex-direction: column;
+   background-color: aliceblue;
+}
+button{
+    align-self: center;
+    margin: 10px;
+
+}
+.Precio{
+    width: 20%;
+    margin: 10px;
+    text-align: center;
+}
+.W40{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p{
+    margin:10px;
+}
+.Precio-slider{
+    width: 30%;
 }
