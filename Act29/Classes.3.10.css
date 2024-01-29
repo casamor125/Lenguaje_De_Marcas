@@ -1,11 +1,13 @@
 .div{
-    height: 200px;
-    width:200px;
-    background-color: black;
+    height: 15%;
+    width:15%;
     display: none;
     margin-left: 10px;
     border-radius: 5px;
+    cursor: pointer;
+    
 }
+
 .none{
     display: none;
 }
