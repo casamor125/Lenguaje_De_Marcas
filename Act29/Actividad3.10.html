@@ -14,23 +14,29 @@
     <h1>Biel AirReservations</h1>
     <div class="FlexR">
         <div class="W40">
-            <input type="text" id="precio-valor" class="Precio" readonly>
+            <p> Presupuesto:</p><input type="text" id="precio-valor" class="Precio" readonly>
             <div id="precio-slider" class="Precio-slider"></div>
+
         </div>
         <div class="W40">
-            <p>Date: <input type="text" id="datepicker"></p>
+            <p>from: <input type="text" id="datepicker"></p>
+            <p>to: <input type="text" id="datepicker2"></p>
         </div>
-    </div>   
-        <button>Recomendaciones</button>
-        <!-- recomendaciones -->
-        <div id="Recomendaciones" class="FlexR">
-            <div class="div"> <img src="https://picsum.photos/200/200" alt=""></div>
-            <div class="div"> <img src="https://picsum.photos/200/200" alt=""></div>
-            <div class="div"> <img src="https://picsum.photos/200/200" alt=""></div>
-            <div class="div"> <img src="https://picsum.photos/200/200" alt=""></div>
-            <div class="div"> <img src="https://picsum.photos/200/200" alt=""></div>
+        <div >
+            <label for="tags">Destinacion: </label>
+            <input id="tags">
         </div>
-    
+    </div>
+    <button>Recomendaciones</button>
+    <!-- recomendaciones -->
+    <div id="Recomendaciones" class="FlexR">
+        <div class="div"> <img src="https://picsum.photos/200/200" alt=""></div>
+        <div class="div"> <img src="https://picsum.photos/200/200" alt=""></div>
+        <div class="div"> <img src="https://picsum.photos/200/200" alt=""></div>
+        <div class="div"> <img src="https://picsum.photos/200/200" alt=""></div>
+        <div class="div"> <img src="https://picsum.photos/200/200" alt=""></div>
+    </div>
+
 
 
     <script src="https://code.jquery.com/jquery-3.7.1.js"
@@ -53,34 +59,66 @@
 
 
             });
+            $(document).ready(function () {
+                // Configuración del primer datepicker
+                $("#datepicker").datepicker({
+                    dateFormat: 'dd/mm/yy',  // Formato de fecha
+                    showButtonPanel: true,   // Muestra un panel con botones
+                    changeMonth: true,       // Permite cambiar el mes
+                    changeYear: true,        // Permite cambiar el año
+                    onSelect: function (selectedDate) {
+                        // Configura las opciones del segundo datepicker para limitar fechas anteriores
+                        $("#datepicker2").datepicker("option", "minDate", selectedDate);
+                    }
+                });
 
-            $("#datepicker").datepicker({
-                dateFormat: 'dd/mm/yy',  // Formato de fecha
-                showButtonPanel: true,   // Muestra un panel con botones
-                changeMonth: true,       // Permite cambiar el mes
-                changeYear: true         // Permite cambiar el año
+                // Configuración del segundo datepicker
+                $("#datepicker2").datepicker({
+                    dateFormat: 'dd/mm/yy',  // Formato de fecha
+                    showButtonPanel: true,   // Muestra un panel con botones
+                    changeMonth: true,       // Permite cambiar el mes
+                    changeYear: true         // Permite cambiar el año
+                });
             });
 
             $("#precio-slider").slider({
-                range: "min", // Especifica que es un slider de rango mínimo
-                min: 1,       // Valor mínimo del slider
-                max: 999,     // Valor máximo del slider
-                value: 50,    // Valor inicial del slider
+                range: true,    // Ahora es un slider de rango
+                min: 1,         // Valor mínimo del slider
+                max: 999,       // Valor máximo del slider
+                values: [0, 100],   // Valores iniciales del rango
                 slide: function (event, ui) {
-                    $("#precio-valor").val(ui.value); // Actualiza el valor mostrado mientras se desliza
+                    $("#precio-valor").val(ui.values[0] + " - " + ui.values[1]); // Actualiza el valor mostrado mientras se desliza
                 }
             });
 
-            // Establece el valor inicial en el campo de entrada
-            $("#precio-valor").val($("#precio-slider").slider("value"));
+            // Establece los valores iniciales en el campo de entrada
+            $("#precio-valor").val($("#precio-slider").slider("values", 0) + " - " + $("#precio-slider").slider("values", 1));
 
-
-            $(".div").click(function(){
+            $(".div").click(function () {
 
                 alert('Reserva Hecha');
             });
 
-            
+
+            $( function() {
+    var availableTags = [
+      "Madrid",
+      "Barcelona",
+      "Bilbao",
+      "Palma de Mallorca",
+      "Ibiza",
+      "Valencia",
+      "Caceres",
+      "Santander",
+      "Sevilla",
+      "Almeria",
+      "Guadalajara",
+      "Gijon",
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  } );
         });
 
 
