@@ -1,12 +1,17 @@
 import React from "react";
-import { Button } from "react-bootstrap"
 
-function Todoitem({content}:{content:String}){
-return <li>{content}</li>;
-
- <div>
-    <li >{content}</li>
-
- </div>
+interface TodoItemProps {
+  content: string;
+  onDelete: () => void;
 }
-export default Todoitem;
+
+const TodoItem: React.FC<TodoItemProps>= ({ content, onDelete }) => {
+  return (
+    <li>
+      {content}
+      <button onClick={onDelete}>Hecha</button>
+    </li>
+  );
+};
+
+export default TodoItem;
