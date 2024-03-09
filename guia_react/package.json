@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "set PUBLIC_URL=https://casamor125.github.io/Lenguaje_De_Marcas/guia_react/build&&react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
