@@ -7,11 +7,7 @@ import Hotel from "./Hotel";
 import Activitats from "./Activitats";
 import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
-import { Navbar } from "react-bootstrap";
-
-
-
-
+// import { Navbar } from "react-bootstrap";
 function App() {
 
   return (
@@ -42,7 +38,7 @@ function App() {
 </nav> 
       <Routes>
         <Route index element={<Home />} />
-        <Route path = "Punts" element={<PuntsInteres />} />
+        <Route path = "/Punts" element={<PuntsInteres />} />
         <Route path = "Restaurants" element={<Restaurants />} />
         <Route path = "Hotel" element={<Hotel />} />
         <Route path = "Activitats" element={<Activitats />} />
