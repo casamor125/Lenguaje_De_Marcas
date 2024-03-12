@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.b1d7ec7b.css",
-    "main.js": "/static/js/main.c519324d.js",
-    "static/js/787.1937f22b.chunk.js": "/static/js/787.1937f22b.chunk.js",
-    "index.html": "/index.html",
-    "main.b1d7ec7b.css.map": "/static/css/main.b1d7ec7b.css.map",
-    "main.c519324d.js.map": "/static/js/main.c519324d.js.map",
-    "787.1937f22b.chunk.js.map": "/static/js/787.1937f22b.chunk.js.map"
+    "main.css": "https://casamor125.github.io/Lenguaje_De_Marcas/myapp/build/static/css/main.b1d7ec7b.css",
+    "main.js": "https://casamor125.github.io/Lenguaje_De_Marcas/myapp/build/static/js/main.2210c2a3.js",
+    "static/js/787.1937f22b.chunk.js": "https://casamor125.github.io/Lenguaje_De_Marcas/myapp/build/static/js/787.1937f22b.chunk.js",
+    "index.html": "https://casamor125.github.io/Lenguaje_De_Marcas/myapp/build/index.html",
+    "main.b1d7ec7b.css.map": "https://casamor125.github.io/Lenguaje_De_Marcas/myapp/build/static/css/main.b1d7ec7b.css.map",
+    "main.2210c2a3.js.map": "https://casamor125.github.io/Lenguaje_De_Marcas/myapp/build/static/js/main.2210c2a3.js.map",
+    "787.1937f22b.chunk.js.map": "https://casamor125.github.io/Lenguaje_De_Marcas/myapp/build/static/js/787.1937f22b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b1d7ec7b.css",
-    "static/js/main.c519324d.js"
+    "static/js/main.2210c2a3.js"
   ]
 }
