@@ -12,7 +12,7 @@
     "@types/react-dom": "^18.2.21",
     "bootstrap": "^5.3.3",
     "react": "^18.2.0",
-    "react-bootstrap": "^2.10.1",
+    "react-bootstrap": "^2.10.2",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "set PUBLIC_URL=https://casamor125.github.io/Lenguaje_De_Marcas/explorador-react/build&&react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
