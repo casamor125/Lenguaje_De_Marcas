@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "https://casamor125.github.io/Lenguaje_De_Marcas/lector_json/build/static/css/main.711f1583.css",
+    "main.js": "https://casamor125.github.io/Lenguaje_De_Marcas/lector_json/build/static/js/main.d33585e3.js",
+    "static/js/927.5b0295b1.chunk.js": "https://casamor125.github.io/Lenguaje_De_Marcas/lector_json/build/static/js/927.5b0295b1.chunk.js",
+    "static/js/453.88ecfe82.chunk.js": "https://casamor125.github.io/Lenguaje_De_Marcas/lector_json/build/static/js/453.88ecfe82.chunk.js",
+    "index.html": "https://casamor125.github.io/Lenguaje_De_Marcas/lector_json/build/index.html",
+    "main.711f1583.css.map": "https://casamor125.github.io/Lenguaje_De_Marcas/lector_json/build/static/css/main.711f1583.css.map",
+    "main.d33585e3.js.map": "https://casamor125.github.io/Lenguaje_De_Marcas/lector_json/build/static/js/main.d33585e3.js.map",
+    "453.88ecfe82.chunk.js.map": "https://casamor125.github.io/Lenguaje_De_Marcas/lector_json/build/static/js/453.88ecfe82.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.711f1583.css",
+    "static/js/main.d33585e3.js"
+  ]
+}
