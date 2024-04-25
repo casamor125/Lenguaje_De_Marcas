@@ -29,13 +29,13 @@ app.get('/usuaris', (req, res) => {
   })
 
   app.get('/comandes', (req, res) => {
-    const rows = db.prepare('SELECT * FROM comanda ').all();
-    res.json(rows)
+    const comandes = db.prepare('SELECT c.*,p.nom as nom_producte, p.preu,u.* FROM comanda c join productes p on c.productes_id = p.id join usuaris u on c.usuari_id = u.id').all();
+    res.json(comandes)
   })
 
   app.get('/comanda', (req, res) => {
     comanda_id = req.query.id;
-    const row = db.prepare('SELECT * FROM comanda where id = ? ').get(comanda_id);
+    const row = db.prepare('SELECT c.*,p.nom as nom_producte, p.preu,u.* FROM comanda c join productes p on c.productes_id = p.id join usuaris u on c.usuari_id = u.id where c.id = ? ').get(comanda_id);
     res.json(row)
   })
 
