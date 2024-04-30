@@ -4,7 +4,12 @@ const port = 3000
 const db = require('better-sqlite3')('bdd6.01.sqlite')
 
 app.use(express.json());
+app.set("view engine", "ejs");
 
+app.get('/', (req, res) => {
+  const rows = db.prepare('SELECT nom FROM usuaris ').all();
+  res.render("index", msgs=rows);
+})
 
 app.get('/usuaris', (req, res) => {
     const rows = db.prepare('SELECT * FROM usuaris ').all();
