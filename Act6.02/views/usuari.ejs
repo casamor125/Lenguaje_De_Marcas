@@ -1,11 +1,15 @@
-<%- include("header")%>
-    
-        <form action="/usuari" method="post">
-            <label for="nom">Nom:</label>
-            <input type="text" name="nom" id="nom">
-            <label for="email" >email:</label>
-            <input type="text" name="email" id="email">
-            <button type="submit">Enviar</button>
-        </form>
-
+<%- include ("header") %>
+    <form action="/usuari" method="post" class="container-sm mt-5">
+        <div class="mb-3">
+          <label for="nom" class="form-label">nom</label>
+          <input type="text" class="form-control" name="nom" id="nom" required>
+          <div  class="form-text">Insert the coolest name ever here!</div>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" name="email" id="email" required>
+            <div class="form-text">I don't need your goofy ahh email! Write a normal one!</div>
+          </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
 <%- include("footer")%>
