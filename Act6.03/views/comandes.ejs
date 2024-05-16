@@ -1,0 +1,12 @@
+<%- include ("header") %>
+
+<% comandes.forEach((comanda, posicion)=>{ %>
+
+  <p class="border border-primary rounded p-3 bg-light text-dark"><%= comanda.nom %> <%= comanda.nom_producte %>
+    <%= comanda.id %>
+    <a class="btn btn-primary" href="/comanda?id=<%=comanda.id%>">Ver Detalles</a>
+  </p>
+
+<% })   %>
+
+<%- include("footer")%>
