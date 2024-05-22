@@ -22,6 +22,21 @@ app.get('/usuaris', (req, res) => {
   
 })
 
+
+app.get('/usuariActualitza', (req, res) => {
+  if (req.query.id){
+    // estamos en una modificación
+    // render será del update con parametros
+  } else{
+    // estamos en una creación
+    // render sera del new
+  }
+  // hacer bonito esto no el json y ya
+   const rows = db.prepare('SELECT * FROM usuaris ').all();
+   
+   res.render("usuari", msgs=rows);
+   
+ })
 app.post('/usuaris', (req, res) => {
 
 
@@ -31,7 +46,7 @@ app.post('/usuaris', (req, res) => {
     console.log(info);
 
   }
-  res.redirect("usuari");
+  res.redirect("usuaris");
 
 })
 
@@ -41,7 +56,7 @@ app.get('/productes', (req, res) => {
   
    // hacer bonito esto no el json y ya
   const rows = db.prepare('SELECT * FROM productes ').all();
-  res.render("producte", msgs = rows);
+  res.render("productes", msgs = rows);
 })
 
 app.post('/productes', (req, res) => {
@@ -53,7 +68,7 @@ app.post('/productes', (req, res) => {
     console.log(info);
 
   }
-  res.redirect("producte");
+  res.redirect("productes");
 
 })
 
