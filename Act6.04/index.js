@@ -22,21 +22,6 @@ app.get('/usuaris', (req, res) => {
   
 })
 
-
-app.get('/usuariActualitza', (req, res) => {
-  if (req.query.id){
-    // estamos en una modificación
-    // render será del update con parametros
-  } else{
-    // estamos en una creación
-    // render sera del new
-  }
-  // hacer bonito esto no el json y ya
-   const rows = db.prepare('SELECT * FROM usuaris ').all();
-   
-   res.render("usuari", msgs=rows);
-   
- })
 app.post('/usuaris', (req, res) => {
 
 
@@ -46,7 +31,7 @@ app.post('/usuaris', (req, res) => {
     console.log(info);
 
   }
-  res.redirect("usuaris");
+  res.redirect("usuari");
 
 })
 
@@ -56,7 +41,7 @@ app.get('/productes', (req, res) => {
   
    // hacer bonito esto no el json y ya
   const rows = db.prepare('SELECT * FROM productes ').all();
-  res.render("productes", msgs = rows);
+  res.render("producte", msgs = rows);
 })
 
 app.post('/productes', (req, res) => {
@@ -68,7 +53,7 @@ app.post('/productes', (req, res) => {
     console.log(info);
 
   }
-  res.redirect("productes");
+  res.redirect("producte");
 
 })
 
@@ -91,6 +76,28 @@ app.get('/comanda', (req, res) => {
   res.render("comanda",{ comanda : row});
   // res.json(row);
   
+})
+
+
+app.get('/AfegirComanda', (req, res) => {
+  
+  const Usuaris = db.prepare('SELECT * FROM usuaris ').all();
+  const Productes = db.prepare('SELECT * FROM productes ').all();
+  res.render("AfegirComanda", msgs1 = Usuaris, msgs2 = Productes);
+  
+})
+
+app.post('/AfegirComanda', (req, res) => {
+  
+   
+  if (req.body.usuari && req.body.producte) {
+    const insert = db.prepare("INSERT INTO comandes (usuari_id, productes_id) VALUES (?,?)");
+    const info = insert.run(req.body.usuari_id, req.body.productes_id);
+    console.log(info);
+ 
+  }
+  res.redirect("Comandes");
+
 })
 
 
