@@ -79,6 +79,28 @@ app.get('/comanda', (req, res) => {
 })
 
 
+app.get('/AfegirComanda', (req, res) => {
+  
+  const Usuaris = db.prepare('SELECT * FROM usuaris ').all();
+  const Productes = db.prepare('SELECT * FROM productes ').all();
+  res.render("AfegirComanda", msgs1 = Usuaris, msgs2 = Productes);
+  
+})
+
+app.post('/AfegirComanda', (req, res) => {
+  
+   
+  if (req.body.usuari && req.body.producte) {
+    const insert = db.prepare("INSERT INTO comandes (usuari_id, productes_id) VALUES (?,?)");
+    const info = insert.run(req.body.usuari_id, req.body.productes_id);
+    console.log(info);
+ 
+  }
+  res.redirect("Comandes");
+
+})
+
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
