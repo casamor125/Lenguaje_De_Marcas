@@ -1,12 +1,6 @@
 <%- include ("header") %>
 
-<% msgs.forEach((msg, producte)=>{ %>
-
-  <p class="border border-primary rounded p-3 bg-light text-dark"><%= msg.nom %></p>
-
-<% })   %>
-
-    <form action="/productes" method="post" class="container-sm mt-5">
+    <form action="/anadirProducte" method="post" class="container-sm mt-5">
         <div class="mb-3">
           <label for="nom" class="form-label">nom</label>
           <input type="text" class="form-control" name="nom" id="nom" required>

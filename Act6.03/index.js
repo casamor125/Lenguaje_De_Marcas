@@ -22,22 +22,15 @@ app.get('/usuaris', (req, res) => {
   
 })
 
-
-app.get('/usuariActualitza', (req, res) => {
-  if (req.query.id){
-    // estamos en una modificación
-    // render será del update con parametros
-  } else{
-    // estamos en una creación
-    // render sera del new
-  }
+app.get('/anadirUsuari', (req, res) => {
   // hacer bonito esto no el json y ya
    const rows = db.prepare('SELECT * FROM usuaris ').all();
    
-   res.render("usuari", msgs=rows);
+   res.render("anadirUsuari", msgs=rows);
    
  })
-app.post('/usuaris', (req, res) => {
+
+app.post('/anadirUsuari', (req, res) => {
 
 
   if (req.body.nom && req.body.email) {
@@ -56,19 +49,27 @@ app.get('/productes', (req, res) => {
   
    // hacer bonito esto no el json y ya
   const rows = db.prepare('SELECT * FROM productes ').all();
-  res.render("productes", msgs = rows);
+  res.render("producte", msgs = rows);
 })
 
-app.post('/productes', (req, res) => {
 
- 
-  if (req.body.nom && req.body.preu) {
-    const insert = db.prepare("INSERT INTO productes (nom, preu) VALUES (?,?)");
-    const info = insert.run(req.body.nom, req.body.preu);
-    console.log(info);
+app.get('/anadirProducte', (req, res) => {
+  
+  // hacer bonito esto no el json y ya
+ const rows = db.prepare('SELECT * FROM productes ').all();
+ res.render("anadirProducte", msgs = rows);
+})
 
-  }
-  res.redirect("productes");
+app.post('/anadirProducte', (req, res) => {
+
+
+ if (req.body.nom && req.body.preu) {
+   const insert = db.prepare("INSERT INTO productes (nom, preu) VALUES (?,?)");
+   const info = insert.run(req.body.nom, req.body.preu);
+   console.log(info);
+
+ }
+ res.redirect("productes");
 
 })
 
@@ -91,6 +92,28 @@ app.get('/comanda', (req, res) => {
   res.render("comanda",{ comanda : row});
   // res.json(row);
   
+})
+
+
+app.get('/anadir', (req, res) => {
+  
+  const Usuaris = db.prepare('SELECT * FROM usuaris ').all();
+  const Productes = db.prepare('SELECT * FROM productes ').all();
+  res.render("anadir", {usuari : Usuaris ,producte : Productes});//, {producte : Productes}
+  
+})
+
+app.post('/anadir', (req, res) => {
+  
+   console.log(req.body)
+  if (req.body.usuari && req.body.producte) {
+    const insert = db.prepare("INSERT INTO comanda (usuari_id, productes_id) VALUES (?,?)");
+    const info = insert.run(req.body.usuari, req.body.producte);
+    console.log(info);
+ 
+  }
+  res.redirect("anadir");
+
 })
 
 

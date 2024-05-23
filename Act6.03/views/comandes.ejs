@@ -2,13 +2,13 @@
 
 <% comandes.forEach((comanda, posicion)=>{ %>
 
-  <p class="border border-primary rounded p-3 bg-light text-dark">Comprador: <%= comanda.nom %>
-    Producto:  <%= comanda.nom_producte %>
+  <p class="border border-primary rounded p-3 bg-light text-dark"><%= comanda.nom %> <%= comanda.nom_producte %>
+    <%= comanda.id %>
     <a class="btn btn-primary" href="/comanda?id=<%=comanda.id%>">Ver Detalles</a>
   </p>
 
 <% })   %>
 
-
+<a class="btn btn-primary" href="/anadir">afegir nova comanda</a>
 
 <%- include("footer")%>
