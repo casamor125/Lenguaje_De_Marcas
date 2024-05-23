@@ -1,6 +1,6 @@
 <%- include ("header") %>
 
-    <form action="/AfegirComanda" method="post" class="container-sm mt-5">
+    <form action="/anadir" method="post" class="container-sm mt-5">
         <!-- <div class="mb-3">
           <label for="nom" class="form-label">nom</label>
           <input type="text" class="form-control" name="nom" id="nom" required>
@@ -16,7 +16,7 @@
         <label for="usuaris">Eligeix un usuari: </label>
 
           <select name="usuari" id="usuari">
-            <% msgs1.forEach((msg, usuaris)=>{ %>
+            <% usuari.forEach((msg, usuaris)=>{ %>
 
               <option value="<%= msg.id %>"><%= msg.nom %></option>
             
@@ -26,12 +26,12 @@
           <label for="productes">Eligeix un producte:</label>
 
           <select name="producte" id="producte">
-            <% msgs2.forEach((msg, productes)=>{ %>
+            <% producte.forEach((msg, productes)=>{ %>
 
               <option value="<%= msg.id %>"><%= msg.nom %></option>
             
             <% })   %>
           </select>
-          <button type="submit" class="btn btn-primary ">Submit</button>
+          <button type="submit" class="btn btn-primary ">Crear</button>
       </form>
 <%- include("footer")%>

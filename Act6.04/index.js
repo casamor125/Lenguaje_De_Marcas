@@ -22,7 +22,15 @@ app.get('/usuaris', (req, res) => {
   
 })
 
-app.post('/usuaris', (req, res) => {
+app.get('/anadirUsuari', (req, res) => {
+  // hacer bonito esto no el json y ya
+   const rows = db.prepare('SELECT * FROM usuaris ').all();
+   
+   res.render("anadirUsuari", msgs=rows);
+   
+ })
+
+app.post('/anadirUsuari', (req, res) => {
 
 
   if (req.body.nom && req.body.email) {
@@ -31,7 +39,7 @@ app.post('/usuaris', (req, res) => {
     console.log(info);
 
   }
-  res.redirect("usuari");
+  res.redirect("usuaris");
 
 })
 
@@ -44,16 +52,24 @@ app.get('/productes', (req, res) => {
   res.render("producte", msgs = rows);
 })
 
-app.post('/productes', (req, res) => {
 
- 
-  if (req.body.nom && req.body.preu) {
-    const insert = db.prepare("INSERT INTO productes (nom, preu) VALUES (?,?)");
-    const info = insert.run(req.body.nom, req.body.preu);
-    console.log(info);
+app.get('/anadirProducte', (req, res) => {
+  
+  // hacer bonito esto no el json y ya
+ const rows = db.prepare('SELECT * FROM productes ').all();
+ res.render("anadirProducte", msgs = rows);
+})
 
-  }
-  res.redirect("producte");
+app.post('/anadirProducte', (req, res) => {
+
+
+ if (req.body.nom && req.body.preu) {
+   const insert = db.prepare("INSERT INTO productes (nom, preu) VALUES (?,?)");
+   const info = insert.run(req.body.nom, req.body.preu);
+   console.log(info);
+
+ }
+ res.redirect("productes");
 
 })
 
@@ -79,24 +95,24 @@ app.get('/comanda', (req, res) => {
 })
 
 
-app.get('/AfegirComanda', (req, res) => {
+app.get('/anadir', (req, res) => {
   
   const Usuaris = db.prepare('SELECT * FROM usuaris ').all();
   const Productes = db.prepare('SELECT * FROM productes ').all();
-  res.render("AfegirComanda", msgs1 = Usuaris, msgs2 = Productes);
+  res.render("anadir", {usuari : Usuaris ,producte : Productes});//, {producte : Productes}
   
 })
 
-app.post('/AfegirComanda', (req, res) => {
+app.post('/anadir', (req, res) => {
   
-   
+   console.log(req.body)
   if (req.body.usuari && req.body.producte) {
-    const insert = db.prepare("INSERT INTO comandes (usuari_id, productes_id) VALUES (?,?)");
-    const info = insert.run(req.body.usuari_id, req.body.productes_id);
+    const insert = db.prepare("INSERT INTO comanda (usuari_id, productes_id) VALUES (?,?)");
+    const info = insert.run(req.body.usuari, req.body.producte);
     console.log(info);
  
   }
-  res.redirect("Comandes");
+  res.redirect("anadir");
 
 })
 

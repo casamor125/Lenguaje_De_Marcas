@@ -6,17 +6,6 @@
 
 <% })   %>
 
-    <form action="/producte" method="post" class="container-sm mt-5">
-        <div class="mb-3">
-          <label for="nom" class="form-label">nom</label>
-          <input type="text" class="form-control" name="nom" id="nom" required>
-          <div  class="form-text">Insert the name of your product</div>
-        </div>
-        <div class="mb-3">
-            <label for="preu" class="form-label">preu</label>
-            <input type="number" class="form-control" name="preu" id="preu" min="0" required>
-            <div class="form-text">Insert the price for the new product</div>
-          </div>
-        <button type="submit" class="btn btn-primary ">Submit</button>
-      </form>
+  <a href="/anadirProducte" class="btn btn-primary">Crear nou producte</a>
+
 <%- include("footer")%>
