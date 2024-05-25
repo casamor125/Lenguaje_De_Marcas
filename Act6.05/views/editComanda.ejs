@@ -1,0 +1,29 @@
+<%- include ("header") %>
+
+
+  <form action="/anadir" method="post" class="container-sm mt-5">
+ 
+    <label for="usuaris">Eligeix un usuari: </label>
+
+      <select name="usuari" id="usuari">
+        <% usuari.forEach((msg, usuaris)=>{ %>
+          <%  if (msg.id != id del path) { %>
+          <option value="<%= msg.id %>"><%= msg.nom %></option>
+        
+        <% })   %>
+      </select>
+
+      <label for="productes">Eligeix un producte:</label>
+
+      <select name="producte" id="producte">
+        <% producte.forEach((msg, productes)=>{ %>
+
+          <option  value="<%= msg.id %>"><%= msg.nom %></option>
+        
+        <% })   %>
+      </select>
+      <button type="submit" class="btn btn-primary ">Crear</button>
+  </form>
+
+
+<%- include("footer")%>

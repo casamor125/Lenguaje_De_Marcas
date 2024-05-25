@@ -1,0 +1,11 @@
+<%- include ("header") %>
+
+<% msgs.forEach((msg, producte)=>{ %>
+
+  <p class="border border-primary rounded p-3 bg-light text-dark"><%= msg.nom %></p>
+
+<% })   %>
+
+  <a href="/anadirProducte" class="btn btn-primary">Crear nou producte</a>
+
+<%- include("footer")%>
