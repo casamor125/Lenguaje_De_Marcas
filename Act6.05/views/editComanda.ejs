@@ -1,28 +1,34 @@
 <%- include ("header") %>
 
 
-  <form action="/anadir" method="post" class="container-sm mt-5">
+  <form action="/editComanda" method="post" class="container-sm mt-5">
+
+    <input hidden value="<%= comanda.id %>" name="id">
  
     <label for="usuaris">Eligeix un usuari: </label>
 
       <select name="usuari" id="usuari">
         <% usuari.forEach((msg, usuaris)=>{ %>
-          <%  if (msg.id != id del path) { %>
-          <option value="<%= msg.id %>"><%= msg.nom %></option>
+          <%if(msg.id === comanda.usuari_id){%>
+          <option selected value="<%= msg.id %>"><%= msg.nom %></option>
+          <%}else{%>
+          <option  value="<%= msg.id %>"><%= msg.nom %></option>
         
-        <% })   %>
+        <%} })   %>
       </select>
 
       <label for="productes">Eligeix un producte:</label>
 
       <select name="producte" id="producte">
         <% producte.forEach((msg, productes)=>{ %>
-
-          <option  value="<%= msg.id %>"><%= msg.nom %></option>
-        
-        <% })   %>
+          <%if(msg.id == comanda.productes_id){%>
+          <option selected value="<%= msg.id %>"><%= msg.nom %></option>
+        <%}else{%>
+        <option  value="<%= msg.id %>"><%= msg.nom %></option>
+        <% }})   %>
       </select>
-      <button type="submit" class="btn btn-primary ">Crear</button>
+
+      <button type="submit" class="btn btn-primary ">Editar</button>
   </form>
 
 

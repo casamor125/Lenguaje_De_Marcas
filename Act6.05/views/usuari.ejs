@@ -2,7 +2,10 @@
 
 <% msgs.forEach((msg, producte)=>{ %>
 
-  <p class="border border-primary rounded p-3 bg-light text-dark"><%= msg.nom %></p>
+  <p class="border border-primary rounded p-3 bg-light text-dark">
+    <%= msg.nom %> <%= msg.email %>
+    <a class="btn btn-primary"  href="/editUsuari?id=<%=msg.id%>"> Editar Usuari</a>
+  </p>
 
 <% })   %>
 

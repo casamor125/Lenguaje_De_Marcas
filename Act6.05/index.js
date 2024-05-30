@@ -105,41 +105,41 @@ app.post('/anadir', (req, res) => {
 })
 
 app.get('/editUsuari', (req, res) => {
+  usuari_id = req.query.id;
+ const usuari= db.prepare('SELECT * FROM usuaris where id = ? ').get(usuari_id);
 
-  comanda_id = req.query.id;
-  const row = db.prepare('SELECT c.*,p.nom as nom_producte, p.preu as preu_producte,u.* FROM comanda c join productes p on c.productes_id = p.id join usuaris u on c.usuari_id = u.id where c.id = ? ').get(comanda_id);
-  res.render("editUsuari", { comanda: row });
+ res.render("editUsuari", {usuari});
 
 })
 
-app.put('/editUsuari', (req, res) => {
+app.post('/editUsuari', (req, res) => {
 
-  console.log(req.body)
-  if (req.body.nom && req.body.email) {
-    const insert = db.prepare("UPDATE comanda (nom, email) VALUES (?,?)");
-    const info = insert.run(req.body.nom, req.body.email);
-    console.log(info);
+ console.log(req.body)
+ if (req.body.nom && req.body.email && req.body.id) {
+   const insert = db.prepare("UPDATE usuaris SET nom = ?, email = ? WHERE id = ?");
+   const info = insert.run(req.body.nom, req.body.email, req.body.id);
+   console.log(info);
 
-  }
-  res.redirect("usuaris");
+ }
+ res.redirect("usuaris");
 
 
 })
 
 app.get('/editProducte', (req, res) => {
+   producte_id = req.query.id;
+  const producte = db.prepare('SELECT * FROM productes where id = ? ').get(producte_id);
 
-  comanda_id = req.query.id;
-  const row = db.prepare('SELECT c.*,p.nom as nom_producte, p.preu as preu_producte,u.* FROM comanda c join productes p on c.productes_id = p.id join usuaris u on c.usuari_id = u.id where c.id = ? ').get(comanda_id);
-  res.render("editProducte", { comanda: row });
+  res.render("editProducte", {producte});
 
 })
 
-app.put('/editProducte', (req, res) => {
+app.post('/editProducte', (req, res) => {
 
   console.log(req.body)
-  if (req.body.nom && req.body.email) {
-    const insert = db.prepare("UPDATE comanda (nom, email) VALUES (?,?)");
-    const info = insert.run(req.body.nom, req.body.email);
+  if (req.body.nom && req.body.preu && req.body.id) {
+    const insert = db.prepare("UPDATE productes SET nom = ?, preu = ? WHERE id = ?");
+    const info = insert.run(req.body.nom, req.body.preu, req.body.id);
     console.log(info);
 
   }
@@ -149,19 +149,21 @@ app.put('/editProducte', (req, res) => {
 })
 
 app.get('/editComanda', (req, res) => {
-
   comanda_id = req.query.id;
-  const row = db.prepare('SELECT c.*,p.nom as nom_producte, p.preu as preu_producte,u.* FROM comanda c join productes p on c.productes_id = p.id join usuaris u on c.usuari_id = u.id where c.id = ? ').get(comanda_id);
-  res.render("editComanda", { comanda: row });
+  const comanda = db.prepare('SELECT * FROM comanda where id = ? ').get(comanda_id);
+  
+  const Usuaris = db.prepare('SELECT * FROM usuaris ').all();
+  const Productes = db.prepare('SELECT * FROM productes ').all();
+  res.render("editComanda", {comanda, usuari: Usuaris, producte: Productes });
 
 })
 
-app.put('/editComanda', (req, res) => {
+app.post('/editComanda', (req, res) => {
 
   console.log(req.body)
-  if (req.body.nom && req.body.email) {
-    const insert = db.prepare("UPDATE comanda (nom, email) VALUES (?,?)");
-    const info = insert.run(req.body.nom, req.body.email);
+  if (req.body.usuari && req.body.producte && req.body.id) {
+    const insert = db.prepare("UPDATE comanda SET usuari_id = ?, productes_id = ? WHERE id = ?");
+    const info = insert.run(req.body.usuari, req.body.producte, req.body.id);
     console.log(info);
 
   }
